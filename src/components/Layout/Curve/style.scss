@@ -1,0 +1,33 @@
+.curve{
+
+    .sva, .background{
+z-index: 20 !important;
+        position: fixed;
+        height: calc(100vh + 600px);
+        width: 100vw;
+        pointer-events: none;
+        left: 0;
+        top: 0;
+        path{
+            fill: #010921;
+        }
+    }
+    .background{
+        
+        z-index: 20 !important;
+        background-color: #010921;
+        transition: opacity 0s linear 0.1s;
+    }
+    .route{
+      
+        position: fixed;
+        left: 50%;
+        top: 40%;
+        font-family: 'Poppins';
+        color: white;
+        font-size: 46px;
+        z-index: 21 !important;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}

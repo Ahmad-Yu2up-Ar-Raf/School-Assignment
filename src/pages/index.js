@@ -1,114 +1,173 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+'use client';
+import { ReactLenis } from 'lenis/react';
+import Stacking from '../components/Stacking'
+import Hero from '../components/Hero'
+import Keberagaman from '../components/Keberagaman'
+import { useScroll, useTransform, motion } from 'framer-motion';
+import { useRef } from 'react';
+import Curve from '@/components/Layout/Curve'
+import TimelineAnimation from '@/components/Timeline';
 
 export default function Home() {
+  const container = useRef();
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end end'],
+  });
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <> 
+    <Curve   >
+    <main ref={container} className="relative  bg-black  ">
+    <Section1 scrollYProgress={scrollYProgress} />
+    <Section2 scrollYProgress={scrollYProgress} />
+    <ReactLenis root>
+    
+    <main className="bg-black">
+      <div className="wrapper">
+        <section className="text-white  h-screen  w-full bg-slate-950  grid place-content-center sticky top-0">
+          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <h1 className="2xl:text-7xl text-2xl  md:text-4xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+           Mengapa Bhineka Tunggal Ika Dijadikan Sebagai Semboyan Negara ?
+          </h1>
+        </section>
+
+        <section className="bg-gray-300 text-black grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
+          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+          <h1 className="2xl:text-7xl text-2xl  md:text-4xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+            
+          </h1>
+        </section>
+        <section className="text-white  h-screen  w-full bg-slate-950  grid place-content-center sticky top-0">
+          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+          <h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+            Don't Forget To Share <br /> This Sticky CSS Tricks.😎
+          </h1>
+        </section>
+      </div>
+
+      {/* <section className="text-white   w-full bg-slate-950  ">
+        <div className="grid grid-cols-2">
+          <div className="sticky top-0 h-screen flex items-center justify-center">
+            <h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+              Thanks To Scroll.
+              <br /> Now Scroll Up Again☝️🏿
+            </h1>
+          </div>
+          <div className="grid gap-2">
+            <figure className="grid place-content-center -skew-x-12">
+              <img
+                src="https://images.unsplash.com/photo-1718838541476-d04e71caa347?w=500&auto=format&fit=crop"
+                alt=""
+                className="transition-all duration-300 w-80 h-96  align-bottom object-cover "
+              />
+            </figure>
+            <figure className="grid place-content-center skew-x-12">
+              <img
+                src="https://images.unsplash.com/photo-1715432362539-6ab2ab480db2?w=500&auto=format&fit=crop"
+                alt=""
+                className="transition-all duration-300 w-80 h-96  align-bottom object-cover "
+              />
+            </figure>
+            <figure className="grid place-content-center -skew-x-12">
+              <img
+                src="https://images.unsplash.com/photo-1718601980986-0ce75101d52d?w=500&auto=format&fit=crop"
+                alt=""
+                className="transition-all duration-300 w-80 h-96  align-bottom object-cover "
+              />
+            </figure>
+            <figure className="grid place-content-center skew-x-12">
+              <img
+                src="https://images.unsplash.com/photo-1685904042960-66242a0ac352?w=500&auto=format&fit=crop"
+                alt=""
+                className="transition-all duration-300 w-80 h-96  align-bottom object-cover "
+              />
+            </figure>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      <section className="text-white   w-full bg-slate-950  ">
+        <div className="grid grid-cols-2 px-8">
+          <div className="grid gap-2">
+            <figure className="sticky top-0 h-screen grid place-content-center">
+              <img
+                src="https://images.unsplash.com/photo-1718183120769-ece47f31045b?w=500&auto=format&fit=crop"
+                alt=""
+                className="transition-all duration-300 w-96 h-96  align-bottom object-cover rounded-md"
+              />
+            </figure>
+            <figure className="sticky top-0 h-screen grid place-content-center">
+              <img
+                src="https://images.unsplash.com/photo-1715432362539-6ab2ab480db2?w=500&auto=format&fit=crop"
+                alt=""
+                className="transition-all duration-300  w-96 h-96   align-bottom object-cover rounded-md"
+              />
+            </figure>
+            <figure className="sticky top-0 h-screen grid place-content-center">
+              <img
+                src="https://images.unsplash.com/photo-1685904042960-66242a0ac352?w=500&auto=format&fit=crop"
+                alt=""
+                className="transition-all duration-300 w-96 h-96   align-bottom object-cover rounded-md"
+              />
+            </figure>
+            <figure className="sticky top-0 h-screen grid place-content-center">
+              <img
+                src="https://images.unsplash.com/photo-1718838541476-d04e71caa347?w=500&auto=format&fit=crop"
+                alt=""
+                className="transition-all duration-300  w-96 h-96   align-bottom object-cover rounded-md"
+              />
+            </figure>
+          </div>
+          <div className="sticky top-0 h-screen grid place-content-center">
+            <h1 className="text-4xl px-8 font-medium text-right tracking-tight leading-[120%]">
+              Copied & Paste Every Component you want and make an creative
+              website 😎
+            </h1>
+          </div>
+        </div>
+      </section> */}
+
+    </main>
+  </ReactLenis>
+    </main>
+{/* <Stacking></Stacking> */}
+     {/* <main ref={container} className=' '>
+     <Section1 scrollYProgress={scrollYProgress} />
+     <Section2 scrollYProgress={scrollYProgress} />
+ 
+     </main> */}
+    </Curve>
+    </>
   );
 }
+
+
+
+const Section1 = ({ scrollYProgress }) => {
+  const scale = useTransform(scrollYProgress, [0, 1], [1, -2]);
+ 
+  return (
+    <motion.section
+      style={{ scale }}
+      className='sticky   top-0 h-screen  flex flex-col items-center justify-center text-black'
+    >
+<Hero className='absolute  bottom-0 left-0 right-0 top-0 '/>
+    </motion.section>
+  );
+};
+
+const Section2 = ({ scrollYProgress }) => {
+  const scale = useTransform(scrollYProgress, [0, 0], [0, 1]);
+
+  return (
+    <motion.section
+      style={{ scale}}
+      className='relative  bg-gradient-to-t to-[#010921] from-[#06060e] text-blue '
+    >
+    <div className='pt-24  z-20 px-6  md:pt-0 m-auto'>
+
+    <TimelineAnimation  className='absolute max-w-6xl bottom-0 left-0 right-0 top-28 md:top-0 '/>
+    </div>
+    </motion.section>
+  );
+};
