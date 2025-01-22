@@ -12,18 +12,20 @@
     "@motionone/utils": "^10.18.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.7.1",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
     "framer-motion": "^11.18.1",
     "gsap": "^3.12.7",
     "lenis": "^1.1.19",
     "lucide-react": "^0.473.0",
-    "motion": "^11.18.1",
+    "motion": "^11.18.2",
     "next": "15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.83.4",
-    "tailwind-merge": "^2.6.0"
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
