@@ -99,7 +99,7 @@ export default function Curve({ children, backgroundColor }) {
     return (
         <div className="page curve " style={{ backgroundColor }}>
             <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className="background" />
-            <motion.h1 className="route md:text-6xl text-3xl " {...anim(text)}>
+            <motion.h1 className="route md:text-6xl text-xl " {...anim(text)}>
      
              <ScrollElement
             viewport={{ amount: 0.5, margin: '0px 0px 0px 0px' }}

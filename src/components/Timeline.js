@@ -23,30 +23,38 @@ function TimelineAnimation() {
             </h1>
             </ScrollElement>
           </section> */}
+          <main className='max-w-7xl m-auto'>
+
       <section
-        className="sm:grid grid-cols-2 gap-10 h-[650px] pt-10 px-4"
+        className="sm:grid space-y-4 grid-cols-2 gap-10 h-[650px] pt-10 "
         ref={heroRef}>
           
         <TimelineContent animationNum={0} timelineRef={heroRef}>
-          <img
-            src="https://images.unsplash.com/photo-1724690416947-3cdc197ffab1?q=80&w=600&auto=format&fit=crop"
-            className="w-full h-96  object-cover rounded-md "
-            alt=""
+        <video
+          autoPlay
+          muted
+          loop
+          className='w-full  h-full object-cover  aspect-square '
+        >
+          <source
+            src='https://videos.pexels.com/video-files/7710243/7710243-uhd_2560_1440_30fps.mp4'
+            type='video/mp4'
           />
+        </video>
         </TimelineContent>
         <div className="space-y-2 text-white">
           {' '}
           <TimelineContent animationNum={1} timelineRef={heroRef}>
-            <h1 className="text-5xl leading-[110%]">
+            <h1 className="text-5xl ">
             Abad Ke-14: Karya Mpu Tantular
             </h1>
           </TimelineContent>
           <TimelineContent animationNum={2} timelineRef={heroRef}>
-            <p className="text-xl leading-[110%]">
+            <p className="text-base line-clamp-4 text-gray-400 leading-[120%]">
             Bhinneka Tunggal Ika" pertama kali dicatat dalam karya sastra Kakawin Sutasoma yang ditulis oleh Mpu Tantular pada masa kerajaan Majapahit. Dalam karya ini, semboyan tersebut digunakan untuk menggambarkan persatuan meskipun ada perbedaan agama antara Hindu dan Buddha.
             </p>
           </TimelineContent>
-          <TimelineContent animationNum={3} timelineRef={heroRef}>
+          {/* <TimelineContent animationNum={3} timelineRef={heroRef}>
             <a
               className="flex gap-2 w-fit bg-gray-800 rounded-md p-2"
               href="https://github.com/naymurdev"
@@ -54,7 +62,7 @@ function TimelineAnimation() {
               <Github />
               Start it Now
             </a>
-          </TimelineContent>
+          </TimelineContent> */}
         </div>
       </section>
       <section ref={aboutRef} className="sm:grid grid-cols-2 gap-10 pb-10 px-4">
@@ -69,7 +77,7 @@ function TimelineAnimation() {
               guys😍
             </p>
           </TimelineContent>
-          <TimelineContent animationNum={3} timelineRef={aboutRef}>
+          {/* <TimelineContent animationNum={3} timelineRef={aboutRef}>
             <a
               className="flex gap-2 items-center w-fit bg-gray-800 rounded-md p-2"
               href="https://x.com/naymur_dev"
@@ -85,7 +93,7 @@ function TimelineAnimation() {
               </svg>{' '}
               Follow
             </a>
-          </TimelineContent>
+          </TimelineContent> */}
         </div>
         <TimelineContent animationNum={0} timelineRef={aboutRef}>
           <img
@@ -95,6 +103,7 @@ function TimelineAnimation() {
           />
         </TimelineContent>
       </section>
+          </main>
     </>
   );
 }
