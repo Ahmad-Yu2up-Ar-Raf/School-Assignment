@@ -1,11 +1,17 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useRef , useState} from 'react';
 import { Github } from 'lucide-react';
 import { TimelineContent } from '@/components/framer-timeline';
 import ScrollElement from '../components/scroll-element';
 function TimelineAnimation() {
   const aboutRef = useRef(null);
   const heroRef = useRef(null);
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleClass = () => {
+    setIsActive((prev) => !prev);
+  };
+
   return (
     <>
           {/* <section className='text-white     md:h-[70vh]  w-full  grid place-content-center '>
@@ -26,7 +32,7 @@ function TimelineAnimation() {
           <main className='max-w-7xl m-auto'>
 
       <section
-        className="sm:grid space-y-4 grid-cols-2 gap-10 h-[650px] pt-10 "
+        className="sm:grid space-y-4 grid-cols-2 gap-10 pt-10 "
         ref={heroRef}>
           
         <TimelineContent animationNum={0} timelineRef={heroRef}>
@@ -34,7 +40,7 @@ function TimelineAnimation() {
           autoPlay
           muted
           loop
-          className='w-full  h-full object-cover  aspect-square '
+          className='w-full rounded-lg h-full object-cover  aspect-square '
         >
           <source
             src='https://videos.pexels.com/video-files/7710243/7710243-uhd_2560_1440_30fps.mp4'
@@ -45,13 +51,19 @@ function TimelineAnimation() {
         <div className="space-y-2 text-white">
           {' '}
           <TimelineContent animationNum={1} timelineRef={heroRef}>
-            <h1 className="text-5xl ">
+            <h1 className="text-4xl font-medium">
             Abad Ke-14: Karya Mpu Tantular
             </h1>
           </TimelineContent>
           <TimelineContent animationNum={2} timelineRef={heroRef}>
-            <p className="text-base line-clamp-4 text-gray-400 leading-[120%]">
-            Bhinneka Tunggal Ika" pertama kali dicatat dalam karya sastra Kakawin Sutasoma yang ditulis oleh Mpu Tantular pada masa kerajaan Majapahit. Dalam karya ini, semboyan tersebut digunakan untuk menggambarkan persatuan meskipun ada perbedaan agama antara Hindu dan Buddha.
+            <p className="text-base   text-gray-400  cursor-pointer group " onClick={toggleClass}>
+              <span className={isActive ? '' : 'line-clamp-4'} >
+
+            "Bhinneka Tunggal Ika" pertama kali dicatat dalam karya sastra Kakawin Sutasoma yang ditulis oleh Mpu Tantular pada masa kerajaan Majapahit. Dalam karya ini, semboyan tersebut digunakan untuk menggambarkan persatuan meskipun ada perbedaan agama antara Hindu dan Buddha.
+              </span>
+              <span className={isActive ? 'hidden' : 'text-blue-400 group-hover:text-white transition-all ease-in-out'}>
+                Baca Lebih
+              </span>
             </p>
           </TimelineContent>
           {/* <TimelineContent animationNum={3} timelineRef={heroRef}>
