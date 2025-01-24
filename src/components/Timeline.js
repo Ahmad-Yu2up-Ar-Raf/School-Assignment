@@ -44,12 +44,12 @@ const TimelineAnimation = () => {
     {
       title: 'Abad Ke-14: Karya Mpu Tantular',
       description: `"Bhinneka Tunggal Ika" pertama kali dicatat dalam karya sastra Kakawin Sutasoma yang ditulis oleh Mpu Tantular pada masa kerajaan Majapahit. Dalam karya ini, semboyan tersebut digunakan untuk menggambarkan persatuan meskipun ada perbedaan agama antara Hindu dan Buddha.`,
-      imgSrc: 'https://cdn.discordapp.com/attachments/1274996570307432449/1331662634595913748/mpu-prapanca-pendeta-majapahit-y-20211113112230.png?ex=67926ef9&is=67911d79&hm=adc361f7793d2cc903bfe0f8946add79aadca236ee6780692b223b2eb7b80db4&',
+      imgSrc: '/Tantular.jpeg',
     },
     {
       title: 'Abad Ke-15 - Ke-16: Penyebaran dalam Budaya Majapahit',
       description: `Konsep "Bhinneka Tunggal Ika" semakin dikenal dalam budaya Majapahit dan dipahami sebagai simbol persatuan dalam keragaman. Di masa ini, Indonesia (terutama pulau Jawa) terdiri dari berbagai kerajaan dan budaya yang berbeda, tetapi semboyan ini mencerminkan harapan untuk kesatuan di tengah perbedaan tersebut.`,
-      imgSrc: 'https://cdn.discordapp.com/attachments/1274996570307432449/1331656141893271683/6513cb29bbbc8.png?ex=679268ed&is=6791176d&hm=69a3a8b8422f93e33563ebdb53bcebc1379ca1ef8c51d7341c9203c951101818&',
+      imgSrc: 'https://static.republika.co.id/uploads/member/images/news/240608194238-988.jpg',
     },
     {
       title: 'Abad Ke-20: Penjajahan Belanda',
@@ -64,12 +64,12 @@ const TimelineAnimation = () => {
     {
       title: '1945 - Sekarang: Implementasi dalam Pancasila',
       description: `"Bhinneka Tunggal Ika" menjadi bagian dari nilai-nilai Pancasila, terutama pada sila ketiga, yaitu "Persatuan Indonesia". Sejak saat itu, semboyan ini menjadi pedoman penting dalam menjaga persatuan bangsa Indonesia yang terdiri dari banyak suku, bahasa, dan agama.`,
-      imgSrc: 'https://cdn.grid.id/crop/0x0:0x0/x/photo/2024/08/02/17-agustusjpg-20240802022116.jpg',
+      imgSrc: 'https://i.pinimg.com/736x/db/60/26/db6026bd6169acb0a2a149932d1fb3d3.jpg',
     },
     {
       title: 'Era Modern: Penerapan dalam Kehidupan Sehari-hari',
       description: `Pada masa kini, "Bhinneka Tunggal Ika" tetap relevan dalam kehidupan bermasyarakat di Indonesia. Meskipun negara ini terdiri dari berbagai kelompok dengan perbedaan yang kaya, semboyan ini terus menjadi landasan untuk menjaga kerukunan, persatuan, dan toleransi antar warga negara Indonesia.`,
-      imgSrc: 'https://i.pinimg.com/736x/15/3b/ad/153bad9780f512b560bfa4f02e8a4713.jpg',
+      imgSrc: 'https://cdn.grid.id/crop/0x0:0x0/x/photo/2024/08/02/17-agustusjpg-20240802022116.jpg',
     },
   ];
 
@@ -78,10 +78,13 @@ const TimelineAnimation = () => {
     <main className="max-w-7xl m-auto space-y-16 md:space-y-52 py-16">
   <section className='text-white     md:h-72  w-full  grid place-content-center '>
             <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
-            <h1 className='2xl:text-7xl text-4xl md:text-5xl px-8 font-semibold  text-center tracking-tight leading-[120%]'>
-            <TextAnimate animation="blurInUp" by="character">
-              Asal usul semboyan  Bhinneka Tunggal Ika
-       </TextAnimate>
+            <h1 className='2xl:text-7xl text-4xl md:text-5xl px-8 font-semibold w-[12.4em]  md:w-[11.57em] text-center tracking-tight leading-[120%]'>
+            <TextAnimate animation="slideLeft" by="character">
+    Asal usul semboyan
+    Bhinneka Tunggal Ika
+  </TextAnimate>
+
+
             </h1>
           </section>
 {/* <section className='text-white     md:h-[70vh]  w-full  grid place-content-center '>
@@ -102,7 +105,7 @@ const TimelineAnimation = () => {
     key={index} 
     className={index % 2 === 0 ? 'md:order-2' : ''}
   >
-    <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+    <BoxReveal boxColor={"#0357ff"} duration={0.5}>
       <MediaModal
         imgSrc={
          item.imgSrc
@@ -111,20 +114,20 @@ const TimelineAnimation = () => {
     </BoxReveal>
   </div>
 
-    <div className="space-y-2  content-center text-white">
+    <div className="space-y-2 lg:space-y-6 content-center text-white">
       {' '}
        
-      <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+      <BoxReveal boxColor={"#0357ff"} duration={0.5}>
         <h1 className="text-4xl md:text-2xl lg:text-5xl font-medium">
           
-        {parseTitleWithNumberTicker(item.title)}
+        {parseTitleWithNumberTicker(item.title)}<span className='text-blue-400'>.</span>
         </h1>
         </BoxReveal>
    
-        <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+        <BoxReveal boxColor={"#0357ff"} duration={0.5}>
         <p
         className="text-base md:text-sm lg:text-lg content-center text-gray-400 cursor-pointer group"
-        onClick={() => toggleSection(index)} // Tambahkan handler di sini
+        onClick={() => toggleSection(index)} 
       >
         <span className={activeSections[index] ? '' : 'line-clamp-3 md:line-clamp-none'}>
           {item.description} {/* Menampilkan deskripsi */}
@@ -134,7 +137,7 @@ const TimelineAnimation = () => {
             activeSections[index] ? 'hidden' : 'text-blue-400'
           } md:hidden group-hover:text-white transition-all ease-in-out`}
         >
-          Baca Lebih {/* Teks tombol */}
+         Baca selengkapnya
         </span>
       </p>
       </BoxReveal>

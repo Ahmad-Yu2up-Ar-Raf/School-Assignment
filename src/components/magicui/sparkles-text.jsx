@@ -28,7 +28,8 @@ const Sparkle = ({ id, x, y, color, delay, scale }) => {
 
 export const SparklesText = ({
   text,
-  colors = { first: "#9E7AFF", second: "#FE8BBB" },
+  colors = {  first: "#FFD700", // Kuning cerah
+    second: "#5ded1f",},
   className,
   sparklesCount = 10,
   ...props

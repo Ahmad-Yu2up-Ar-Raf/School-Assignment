@@ -21,7 +21,7 @@ export default function ImageMouseTrail({
     const relativeY = y - containerRect.top;
     image.style.left = `${relativeX}px`;
     image.style.top = `${relativeY}px`;
- 
+  
     if (currentZIndexRef.current > 40) {
       currentZIndexRef.current = 1;
     }
@@ -43,7 +43,7 @@ export default function ImageMouseTrail({
   };
   const handleOnMove = (e) => {
     if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / distance) {
-   
+  
       const lead = refs.current[globalIndex % refs.current.length].current;
       const tail =
         refs.current[(globalIndex - maxNumberOfImages) % refs.current.length]
@@ -59,7 +59,7 @@ export default function ImageMouseTrail({
       onTouchMove={(e) => handleOnMove(e.touches[0])}
       ref={containerRef}
       className={cn(
-        'grid place-content-center h-[600px] w-full  text-white relative overflow-hidden rounded-lg',
+        'grid place-content-center h-[600px] w-full bg-[#e0dfdf] relative overflow-hidden rounded-lg',
         className
       )}
     >
@@ -79,7 +79,7 @@ export default function ImageMouseTrail({
           />
         </>
       ))}
-      <article className="relative z-50 mix-blend-difference">
+      <article className="relative text-white z-50 mix-blend-difference">
         {children}
       </article>
     </section>

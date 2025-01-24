@@ -9,7 +9,7 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 function index() {
   return (
     <>
-      <div className="h-screen overflow-hidden bg-black text-white">
+      <div className="h-screen py-4 px-5 overflow-hidden bg-black text-white">
         <article className="grid gap-4 text-center relative z-10 pt-10">
      
       <AnimatedGradientText className={'bg-[#0f1c35]'}>

@@ -32,7 +32,7 @@ export function MediaModal({ imgSrc, videoSrc, className }) {
       <MotionConfig transition={transition}>
         <>
           <motion.div
-            className="w-full h-full  object-cover flex relative  flex-col overflow-hidden cursor-pointer     dark:bg-black  hover:bg-gray-200 dark:hover:bg-gray-950"
+            className="w-full h-full object-center  object-cover flex relative  flex-col overflow-hidden cursor-pointer     dark:bg-black  hover:bg-gray-200 dark:hover:bg-gray-950"
             layoutId={`dialog-${uniqueId}`}
             style={{
               borderRadius: '12px',
@@ -49,14 +49,14 @@ export function MediaModal({ imgSrc, videoSrc, className }) {
                 <img
                   src={imgSrc}
                   alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
-                  className=" "
+                  className="w-full object-cover  h-full "
                 />
               </motion.div>
             )}
             {videoSrc && (
               <motion.div
                 layoutId={`dialog-video-${uniqueId}`}
-                className="w-full h-full"
+                className="w-full "
               >
                 <video
                   autoPlay
@@ -75,7 +75,7 @@ export function MediaModal({ imgSrc, videoSrc, className }) {
             <>
               <motion.div
                 key={`backdrop-${uniqueId}`}
-                className="fixed inset-0 h-full w-full bg-black/25  backdrop-blur-sm "
+                className="fixed inset-0 h-full w-full bg-black/25  backdrop-blur-md "
                 variants={{ open: { opacity: 1 }, closed: { opacity: 0 } }}
                 initial="closed"
                 animate="open"
