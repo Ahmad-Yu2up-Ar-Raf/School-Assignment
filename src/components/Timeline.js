@@ -1,13 +1,13 @@
 'use client';
 import React, { useRef , useState} from 'react';
 // import { Github } from 'lucide-react';
-import { TimelineContent } from '@/components/framer-timeline';
+import { TimelineContent } from '@/components/core/framer-timeline';
 
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { SparklesText } from "@/components/magicui/sparkles-text";
-import { Sparkles } from '@/components/sparkles';
-import { MediaModal } from '@/components/modal';
-import Title from '../components/Judul';
+import { Sparkles } from '@/components/core/sparkles';
+import { MediaModal } from '@/components/core/modal';
+import Title from './core/Judul';
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { Import } from 'lucide-react';
 import { TextAnimate } from "@/components/magicui/text-animate";

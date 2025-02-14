@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useId, useState } from 'react';
 import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
-import { useMediaQuery } from '../lib/use-media-query';
+import { useMediaQuery } from '../../lib/use-media-query';
 import { XIcon } from 'lucide-react';
 const transition = {
   type: 'spring',

@@ -5,9 +5,9 @@ import '@/styles/styles.scss';
 
 export default function App({ Component, pageProps, router }) {
     return (
-        <div className='main'>
+        <div className='main '>
    
-            <AnimatePresence mode='wait'>
+            <AnimatePresence mode='wait' className={"overflow-hidden"}>
                 <Component key={router.route} {...pageProps} />
             </AnimatePresence>
         </div>

@@ -22,7 +22,7 @@
 
 body {
   margin: 0px;
-  overflow: hidden;
+
   background: var(--background);
   font-family: 'Poppins', sans-serif; /* Ganti font di sini */
 }

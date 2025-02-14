@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import ImageMouseTrail from '@/components/mousetrail';
+import ImageMouseTrail from '@/components/core/mousetrail';
 const images = [
   'https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format',
   'https://images.unsplash.com/photo-1548192746-dd526f154ed9?q=80&w=1200&auto=format',

@@ -1,6 +1,6 @@
 import React from 'react';
-import Earth from '@/components/globe';
-import { Sparkles } from '@/components/sparkles';
+import Earth from '@/components/core/globe';
+import { Sparkles } from '@/components/core/sparkles';
 import { cn } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { ChevronRight } from "lucide-react";

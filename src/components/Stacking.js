@@ -4,7 +4,7 @@ import React, { useRef , useState} from 'react';
 import { useTransform, motion, useScroll } from 'framer-motion';
 
 import Image from 'next/image';
-import ScrollElement from '../components/scroll-element';
+import ScrollElement from './core/scroll-element';
 import { ArrowRight } from 'lucide-react';
 const projects = [
   {

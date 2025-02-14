@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { text, curve, translate } from './anim';
-import ScrollElement from '@/components/scroll-element';
+import ScrollElement from '@/components/core/scroll-element';
 const anim = (variants) => {
     return {
         variants,
